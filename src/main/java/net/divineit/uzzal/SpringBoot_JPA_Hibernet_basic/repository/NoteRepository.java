@@ -12,4 +12,6 @@ public interface NoteRepository extends JpaRepository<Note, Long> {
 
     List<Note> getSimillerNote(String tag);
     List<Note> getId();
+
+    List<Note> getName();
 }
