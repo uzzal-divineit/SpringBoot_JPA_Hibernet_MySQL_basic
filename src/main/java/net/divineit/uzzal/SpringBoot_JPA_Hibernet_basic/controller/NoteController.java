@@ -17,11 +17,14 @@ public class NoteController {
     @Autowired
     NoteRepository noteRepository;
 
+    // to find out all note when hit this url using get method
     @GetMapping("/notes")
     public List<Note> getAllNotes(){
         return noteRepository.findAll();
     }
 
+
+    // to add new book info using post command using definded JSON structure
     @PostMapping("/notes")
     public Note creatNote(@Valid @RequestBody Note note){
         return noteRepository.save(note);
